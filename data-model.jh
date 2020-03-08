@@ -1,0 +1,28 @@
+enum EntryLevel {
+    BEGINNER, INTERMEDIATE, EXPERT
+}
+
+entity Enrollment {
+	entryLevel EntryLevel,
+	comments TextBlob
+}
+
+entity Course {
+	title String required,
+    description TextBlob required
+}
+
+entity Program {
+	name String required minlength(2),
+    startDate Instant required,
+    maxStudents Long
+}
+
+relationship ManyToOne {
+	Enrollment{user(login)} to User
+}
+
+relationship ManyToMany {
+	Course{program(name)} to Program{course},
+    Enrollment{course(title)} to Course{enrollment} 
+}

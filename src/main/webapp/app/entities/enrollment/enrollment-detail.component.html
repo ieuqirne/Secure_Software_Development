@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="enrollment">
+            <h2><span>Enrollment</span> {{enrollment.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Entry Level</span></dt>
+                <dd>
+                    <span>{{enrollment.entryLevel}}</span>
+                </dd>
+                <dt><span>Comments</span></dt>
+                <dd>
+                    <span>{{enrollment.comments}}</span>
+                </dd>
+                <dt><span>User</span></dt>
+                <dd>
+                    {{enrollment.user?.login}}
+                </dd>
+                <dt><span>Course</span></dt>
+                <dd>
+                    <span *ngFor="let course of enrollment.courses; let last = last">
+                        <a [routerLink]="['/course', course?.id, 'view' ]">{{course.title}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/enrollment', enrollment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+{
+    "name": "Enrollment",
+    "fields": [
+        {
+            "fieldName": "entryLevel",
+            "fieldType": "EntryLevel",
+            "fieldValues": "BEGINNER,INTERMEDIATE,EXPERT"
+        },
+        {
+            "fieldName": "comments",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "enrollment",
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "otherEntityField": "title",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20180820160002",
+    "entityTableName": "enrollment",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
