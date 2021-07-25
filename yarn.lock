@@ -146,18 +146,6 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-"@ngx-translate/core@^10.0.1":
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-10.0.2.tgz#5eeb78f47845b476a1e892fb2fb153dbbaf72850"
-  dependencies:
-    tslib "^1.9.0"
-
-"@ngx-translate/http-loader@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-3.0.1.tgz#20b0f98bc6c25321129d3e3302ab3cc489c0a42a"
-  dependencies:
-    tslib "^1.9.0"
-
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.1.tgz#53f349bb986ab273d601175aa1b25a655ab90ee3"
@@ -5983,12 +5971,12 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ng-jhipster@0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/ng-jhipster/-/ng-jhipster-0.5.4.tgz#85ef20ad94f82c642181be2ed6c960104ff32fde"
+ng-jhipster@0.11.5:
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/ng-jhipster/-/ng-jhipster-0.11.5.tgz#01505a80d946b40ea80bc2581ef3c1288315cc91"
+  integrity sha512-lf5QyimRalusHRxz4V92tIENvqki1iJMPUqf1tf7qX41MWjsq0c7zRrhEOOyvbJbyZOyxHj4+oePLORQ/B+oBg==
   dependencies:
-    "@ngx-translate/core" "^10.0.1"
-    "@ngx-translate/http-loader" "^3.0.1"
+    tslib "^1.9.0"
 
 ngx-cookie@2.0.1:
   version "2.0.1"
